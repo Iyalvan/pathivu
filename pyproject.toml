@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pathivu"
+version = "0.1.0"
+description = "record immutable git and build intel into your python artifacts"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "Ashok Sivaramakrishnan" }]
+keywords = ["build", "git", "metadata", "artifact", "about", "pathivu"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Build Tools",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "packaging>=23",  # pep 508 requirement parsing
+]
+
+[project.scripts]
+pathivu = "pathivu.__main__:main"
+
+[project.optional-dependencies]
+fastapi = ["fastapi"]
+flask = ["flask"]
+test = ["pytest", "pytest-cov", "fastapi", "flask", "httpx"]
+dev = ["ruff", "pytest", "pytest-cov", "fastapi", "flask", "httpx", "build", "twine"]
+
+[project.urls]
+Homepage = "https://github.com/Iyalvan/pathivu"
+Repository = "https://github.com/Iyalvan/pathivu"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pathivu"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

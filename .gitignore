@@ -1,0 +1,27 @@
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# build artifacts
+dist/
+build/
+
+# tests / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# envs
+.venv/
+venv/
+
+# lint cache
+.ruff_cache/
+
+# editor
+.idea/
+.vscode/
+*.swp
+.DS_Store
