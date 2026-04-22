@@ -161,6 +161,14 @@ pytest
 ruff check .
 ```
 
+## credits
+
+the idea comes straight from [`tag`](https://github.com/tolitius/tag) by
+[Anatoly](https://github.com/tolitius) — a lovely little clojure tool that
+does the same thing for jvm artifacts. `pathivu` is a humble python take on
+the same idea, written because our python builds deserved it too. all credit
+for the shape of this goes upstream.
+
 ## license
 
 MIT
