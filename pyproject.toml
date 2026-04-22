@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pathivu"
-version = "0.1.0"
+version = "0.1.1"
 description = "record immutable git and build intel into your python artifacts"
 readme = "README.md"
 license = "MIT"

@@ -6,8 +6,6 @@ from dataclasses import dataclass
 from pathlib import Path
 from textwrap import dedent
 
-import pytest
-
 from pathivu.deps import build_deps_tree
 
 

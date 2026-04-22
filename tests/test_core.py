@@ -7,8 +7,6 @@ import re
 from pathlib import Path
 from textwrap import dedent
 
-import pytest
-
 from pathivu.core import describe, export_intel
 
 

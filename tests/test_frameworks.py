@@ -22,6 +22,7 @@ def _cleanup(name):
 def test_fastapi_about_endpoint(tmp_path, monkeypatch):
     fastapi = pytest.importorskip("fastapi")
     from fastapi.testclient import TestClient
+
     from pathivu.frameworks.fastapi import about_router
 
     _make_pkg(tmp_path, "pathivu_fake_api", {"about": {"app_name": "api"}})
@@ -41,6 +42,7 @@ def test_fastapi_about_endpoint(tmp_path, monkeypatch):
 def test_fastapi_custom_path(tmp_path, monkeypatch):
     fastapi = pytest.importorskip("fastapi")
     from fastapi.testclient import TestClient
+
     from pathivu.frameworks.fastapi import about_router
 
     _make_pkg(tmp_path, "pathivu_fake_api2", {"x": 1})
